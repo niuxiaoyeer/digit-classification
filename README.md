@@ -1,10 +1,18 @@
-# digit-classification
-Using MINST handwritten digit database to train a network via the multicategory perceptron training algorithm.
+# digit-classification#
+
+## Using MINST handwritten digit database to train a network via the multicategory perceptron training algorithm.##
+
+###
+Each image is 28×28, so that we will have a neural network 28×28 = 784 nodes in the input layer, and 10 nodes in the output layer. We will ignore the biases. We wish to find 784 × 10 = 7840 weights such that the network outputs [1 0 0 · · · 0]T if the input image corresponds to a 0, [0 1 0 ··· 0]T if the input image corresponds to a 1, and so on.
 
 You will use the first n (n ≤ 60000) elements of training set images and training set labels to train our network via the multicategory perceptron training algorithm. Since the patterns are not linearly separable, the misclassification errors may not converge to 0 (unlike the last experiment in HW#1). You need to stop the iterations (epochs) when the ratio of misclassified input patterns falls below some threshold ε. The algorithm for this phase may thus be as follows:
 
 • 0)Givenη,ε,n:
 • 1) Initialize W ∈ R10×784 randomly.
+   -2
+x
+-1
+  1
 • 2) Initialize epoch = 0.
 • 3) Initialize errors(epoch) = 0, for epoch = 0, 1, . . .. • 3.1) Do
 – 3.1.1) for i = 1 to n do (this loop is where we count the misclassification errors)
